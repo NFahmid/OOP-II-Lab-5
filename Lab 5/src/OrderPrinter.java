@@ -2,7 +2,11 @@ import java.util.Collections;
 import java.util.ArrayList;
 
 public class OrderPrinter {
-    ArrayList<Shape> shapes = new ArrayList<Shape>();
+    ArrayList<Shape> shapes;
+
+    public OrderPrinter(ArrayList<Shape> shapes){
+        this.shapes = shapes;
+    }
 
     public void addShape(Shape shape){
         shapes.add(shape);

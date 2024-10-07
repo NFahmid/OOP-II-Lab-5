@@ -1,15 +1,19 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         ShapeFactory shapeFactory = new ShapeFactory();
-        OrderPrinter orderPrinter = new OrderPrinter();
-        orderPrinter.addShape(shapeFactory.createRectangle(1, 2, 3, 4));
-        orderPrinter.addShape(shapeFactory.createSquare(5, 6, 7));
-        orderPrinter.addShape(shapeFactory.createCircle(8, 9, 10));
-        orderPrinter.addShape(shapeFactory.createRectangle(11, 12, 13, 14));
-        orderPrinter.addShape(shapeFactory.createSquare(15, 16, 17));
-        orderPrinter.addShape(shapeFactory.createSquare(17, 16, 17));
-        orderPrinter.addShape(shapeFactory.createCircle(18, 19, 20));
-        orderPrinter.addShape(shapeFactory.createCircle(18, 23, 20));
+        ArrayList<Shape> shapes = new ArrayList<Shape>();
+        shapes.add(shapeFactory.createCircle(0, 0, 5));
+        shapes.add(shapeFactory.createRectangle(1, 2, 3, 4));
+        shapes.add(shapeFactory.createSquare(5, 6, 7));
+        shapes.add(shapeFactory.createCircle(8, 9, 10));
+        shapes.add(shapeFactory.createCircle(10, 9, 10));
+        shapes.add(shapeFactory.createRectangle(11, 12, 13, 14));
+        shapes.add(shapeFactory.createRectangle(11, 1, 13, 14));
+        shapes.add(shapeFactory.createSquare(15, 16, 17));
+        shapes.add(shapeFactory.createSquare(15, 16, 17));
+        OrderPrinter orderPrinter = new OrderPrinter(shapes);
         orderPrinter.orderShapes();
         orderPrinter.printShapes();
     }
