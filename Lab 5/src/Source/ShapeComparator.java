@@ -1,3 +1,5 @@
+package Source;
+
 import java.util.Comparator;
 
 public class ShapeComparator implements Comparator<Shape> {

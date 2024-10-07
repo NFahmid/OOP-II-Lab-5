@@ -1,5 +1,10 @@
+package Test;
+
+
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import Source.*;
 
 class ShapeTest {
 
@@ -14,34 +19,34 @@ class ShapeTest {
     @Test
     void testRectangleAreaCalculate() {
         Rectangle rectangle = new Rectangle(1, 2, 3, 4);
-        assertEquals(12, rectangle.areaCalculate());
+        Assertions.assertEquals(12, rectangle.areaCalculate());
     }
 
     @Test
     void testSquareAreaCalculate() {
         Square square = new Square(5, 6, 7);
-        assertEquals(49, square.areaCalculate());
+        Assertions.assertEquals(49, square.areaCalculate());
     }
 
     @Test
     void testCircleAreaCalculate() {
         Circle circle = new Circle(8, 9, 10);
-        assertEquals(314, circle.areaCalculate());
+        Assertions.assertEquals(314, circle.areaCalculate());
     }
 
     @Test
     void testGetCoordinates() {
         Shape shape = new Rectangle(1, 2, 3, 4);
-        assertEquals(1, shape.getXcordinate());
-        assertEquals(2, shape.getYcordinate());
+        Assertions.assertEquals(1, shape.getXcordinate());
+        Assertions.assertEquals(2, shape.getYcordinate());
     }
 
 
     @Test
     void testShapeConstructor() {
         Shape shape = new Rectangle(1, 2, 3, 4);
-        assertEquals(1, shape.getXcordinate());
-        assertEquals(2, shape.getYcordinate());
+        Assertions.assertEquals(1, shape.getXcordinate());
+        Assertions.assertEquals(2, shape.getYcordinate());
     }
 
     @Test
@@ -49,7 +54,7 @@ class ShapeTest {
         Shape square1 = new Square(5, 6, 7);
         Shape square2 = new Square(5, 6, 7);
         ShapeComparator comparator = new ShapeComparator();
-        assertEquals(0, comparator.compare(square1, square2));
+        Assertions.assertEquals(0, comparator.compare(square1, square2));
     }
 
     @Test

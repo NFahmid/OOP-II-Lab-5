@@ -1,4 +1,6 @@
-abstract class Shape {
+package Source;
+
+public abstract class Shape {
     private int xcordinate;
     private int ycordinate;
 
